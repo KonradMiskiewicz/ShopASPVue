@@ -6,5 +6,7 @@ namespace Shop.Domain.Products
 {
     class CRUDProducts
     {
+        
+        
     }
 }

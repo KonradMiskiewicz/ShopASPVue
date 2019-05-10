@@ -4333,6 +4333,33 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Shop.Database/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
+          "Microsoft.EntityFrameworkCore": "2.1.0",
+          "Microsoft.EntityFrameworkCore.Design": "2.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.0",
+          "Shop.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.Database.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Database.dll": {}
+        }
+      },
+      "Shop.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Shop.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Domain.dll": {}
+        }
       }
     }
   },
@@ -11785,13 +11812,24 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Shop.Database/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Database/Shop.Database.csproj",
+      "msbuildProject": "../Shop.Database/Shop.Database.csproj"
+    },
+    "Shop.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Model/Shop.Domain.csproj",
+      "msbuildProject": "../Model/Shop.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Shop.Database >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11823,7 +11861,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
+              "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

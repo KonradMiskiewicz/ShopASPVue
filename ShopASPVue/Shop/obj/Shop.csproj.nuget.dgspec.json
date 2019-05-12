@@ -56,6 +56,62 @@
         }
       }
     },
+    "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj",
+        "projectName": "Shop.Application",
+        "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj",
+        "packagesPath": "C:\\Users\\n4dre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\n4dre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {
+              "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
+                "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -154,6 +210,9 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
+              "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj": {
+                "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj"
+              },
               "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
                 "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj"
               }

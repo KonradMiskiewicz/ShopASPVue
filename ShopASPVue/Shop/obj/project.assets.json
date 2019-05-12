@@ -4334,6 +4334,19 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Shop.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Shop.Database": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shop.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shop.Application.dll": {}
+        }
+      },
       "Shop.Database/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -11813,6 +11826,11 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Shop.Application/1.0.0": {
+      "type": "project",
+      "path": "../Shop.Application/Shop.Application.csproj",
+      "msbuildProject": "../Shop.Application/Shop.Application.csproj"
+    },
     "Shop.Database/1.0.0": {
       "type": "project",
       "path": "../Shop.Database/Shop.Database.csproj",
@@ -11829,6 +11847,7 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Shop.Application >= 1.0.0",
       "Shop.Database >= 1.0.0"
     ]
   },
@@ -11862,6 +11881,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj": {
+              "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj"
+            },
             "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
               "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj"
             }

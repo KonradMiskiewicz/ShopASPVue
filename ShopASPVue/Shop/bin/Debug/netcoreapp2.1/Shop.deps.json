@@ -27,6 +27,7 @@
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
+          "Shop.Application": "1.0.0",
           "Shop.Database": "1.0.0"
         },
         "runtime": {
@@ -206,6 +207,17 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0"
+        }
+      },
+      "Shop.Application/1.0.0": {
+        "dependencies": {
+          "Shop.Database": "1.0.0"
+        },
+        "runtime": {
+          "Shop.Application.dll": {}
+        },
+        "compile": {
+          "Shop.Application.dll": {}
         }
       },
       "Shop.Database/1.0.0": {
@@ -3234,6 +3246,11 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Shop.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Shop.Database/1.0.0": {
       "type": "project",

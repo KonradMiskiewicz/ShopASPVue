@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.1": {
       "Shop.Application/1.0.0": {
         "dependencies": {
-          "Shop.Database": "1.0.0"
+          "Shop.Database": "1.0.0",
+          "Shop.Domain": "1.0.0"
         },
         "runtime": {
           "Shop.Application.dll": {}

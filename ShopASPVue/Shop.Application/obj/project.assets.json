@@ -4528,7 +4528,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.NETCore.App >= 2.1.0",
-      "Shop.Database >= 1.0.0"
+      "Shop.Database >= 1.0.0",
+      "Shop.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4561,6 +4562,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Model\\Shop.Domain.csproj": {
+              "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Model\\Shop.Domain.csproj"
+            },
             "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
               "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj"
             }

@@ -36,3 +36,4 @@ C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.1\Shop.pdb
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop\bin\Debug\netcoreapp2.1\Shop.Application.dll
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop\bin\Debug\netcoreapp2.1\Shop.Application.pdb
+C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.1\Razor\Pages\Admin\Index.g.cshtml.cs

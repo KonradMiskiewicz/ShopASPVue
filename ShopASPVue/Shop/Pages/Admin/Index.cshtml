@@ -1,0 +1,22 @@
+﻿@page
+@model Shop.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+    <div id="app">
+        <button v-on:click="tooglePrice">Toogle</button>
+        <input type="number" @@change="alert('ALERT!!!')" v-model="price" />
+        <p v-show="showPrice">
+            {{price}}
+        </p>
+        <p v-if="showPrice">
+            {{formatPrice}}
+        </p>
+    </div>
+
+@section scripts{
+    <script src="~/js/Vue.js"></script>
+    <script src="~/js/admin/main.js"></script>
+
+}
+

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Shop.Application.CreateProduct;
-using Shop.Application.GetProducts;
+using Shop.Application.ProductAdmin;
+using Shop.Application.Products;
 using Shop.Database;
 
 namespace Shop.Pages
@@ -18,9 +16,9 @@ namespace Shop.Pages
              _ctx = ctx;
         }
         [BindProperty]
-        public Application.CreateProduct.ProductViewModel Product { get; set; }
+        public CreateProduct.Request Product { get; set; }
 
-        public IEnumerable<Application.GetProducts.ProductViewModel> Products { get; set; }
+        public IEnumerable<GetProducts.ProductViewModel> Products { get; set; }
 
         public void OnGet()
         {
@@ -29,7 +27,7 @@ namespace Shop.Pages
         }
         public async Task<IActionResult> OnPost()
         {
-            await new CRUDProduct(_ctx).Do(Product);
+            await new CreateProduct(_ctx).Add(Product);
             return RedirectToPage("Index");
         }
     }

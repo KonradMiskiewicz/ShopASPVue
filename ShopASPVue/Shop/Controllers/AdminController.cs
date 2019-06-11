@@ -2,6 +2,7 @@
 using Shop.Application.Products;
 using Shop.Application.ProductAdmin;
 using Shop.Database;
+using System.Threading.Tasks;
 
 namespace Shop.Controllers
 {
@@ -19,11 +20,11 @@ namespace Shop.Controllers
         [HttpGet("products/{id}")]
         public IActionResult GetProduct(int id) => Ok(new GetProduct(_ctx).Do(id));
         [HttpPost("products")]
-        public IActionResult CreateProduct([FromBody] CreateProduct.Request vm) => Ok(new CreateProduct(_ctx).Add(vm));
+        public async Task<IActionResult> CreateProductAsync([FromBody] CreateProduct.Request vm) => Ok(await new CreateProduct(_ctx).Add(vm));
         [HttpDelete("products/{id}")]
-        public IActionResult DeleteProduct(int id) => Ok(new DeleteProduct(_ctx).Delete(id));
+        public async Task<IActionResult> DeleteProductAsync(int id) => Ok(await new DeleteProduct(_ctx).Delete(id));
         [HttpPut("products")]
-        public IActionResult UpdateProduct([FromBody] UpdateProduct.ProductViewModel vm) => Ok(new UpdateProduct(_ctx).Update(vm));
+        public async Task<IActionResult> UpdateProductAsync([FromBody] UpdateProduct.Request vm) => Ok(await new UpdateProduct(_ctx).Update(vm));
     
     }
 }

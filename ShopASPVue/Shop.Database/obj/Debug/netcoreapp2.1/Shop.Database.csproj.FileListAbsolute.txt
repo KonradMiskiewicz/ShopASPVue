@@ -12,3 +12,17 @@ C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\net
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.pdb
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Database.runtimeconfig.json
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Database.runtimeconfig.dev.json
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Database.deps.json
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Database.runtimeconfig.json
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Database.runtimeconfig.dev.json
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Database.dll
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Database.pdb
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Domain.dll
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\bin\Debug\netcoreapp2.1\Shop.Domain.pdb
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.csprojAssemblyReference.cache
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.csproj.CoreCompileInputs.cache
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.AssemblyInfoInputs.cache
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.AssemblyInfo.cs
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.csproj.CopyComplete
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.dll
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Database\obj\Debug\netcoreapp2.1\Shop.Database.pdb

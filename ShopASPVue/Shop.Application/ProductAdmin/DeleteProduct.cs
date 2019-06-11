@@ -14,11 +14,12 @@ namespace Shop.Application.ProductAdmin
         {
             _context = context;
         }
-        public async Task Delete(int id)
+        public async Task<bool> Delete(int id)
         {
-            var Product = _context.Products.FirstOrDefault(x => x.Id_Product == id);
+            var Product = _context.Products.FirstOrDefault(x => x.Id == id);
             _context.Products.Remove(Product);
             await _context.SaveChangesAsync();
+            return true;
         }
         public class ProductViewModel
         {

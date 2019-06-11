@@ -16,9 +16,9 @@ namespace Shop.Application.ProductAdmin
         }
 
         public ProductViewModel Do(int id) =>
-          _ctx.Products.Where(x => x.Id_Product == id).Select(x => new ProductViewModel
+          _ctx.Products.Where(x => x.Id == id).Select(x => new ProductViewModel
           {
-              Id = x.Id_Product,
+              Id = x.Id,
               Name = x.Name,
               Description = x.Description,
               Value = x.Value}).FirstOrDefault();

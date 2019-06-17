@@ -1,5 +1,6 @@
+##########
+#Foldes#
 .vs/
-Shop/bin/*
-Shop/obj/*
-Shop.Application/bin/*
-Shop.Application/obj/*
+#debug files#
+*.catche
+*.json

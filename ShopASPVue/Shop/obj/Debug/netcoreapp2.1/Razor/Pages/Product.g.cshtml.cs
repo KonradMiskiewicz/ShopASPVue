@@ -84,12 +84,12 @@ using Shop;
             WriteLiteral("</p>\r\n    <div>\r\n\r\n        ");
             EndContext();
             BeginContext(176, 422, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3a5fcaef31f4821a39c06703045f3de", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3958fb7821e49409dd73bef9ed4145c", async() => {
                 BeginContext(196, 54, true);
                 WriteLiteral("\r\n\r\n\r\n            <label>Stock</label>\r\n\r\n            ");
                 EndContext();
                 BeginContext(250, 225, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19ac686e3feb4b1fb4c7f96fe31d9aa3", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "134f8ca2e9fa42e5b0d0139a5ce30a93", async() => {
                     BeginContext(290, 2, true);
                     WriteLiteral("\r\n");
                     EndContext();
@@ -103,7 +103,7 @@ using Shop;
                     WriteLiteral("                    ");
                     EndContext();
                     BeginContext(388, 45, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "624060350ca3498e920f18ea203c1d4e", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68f654dda8f34ff1b048aeab92a3ed7c", async() => {
                         BeginContext(411, 13, false);
 #line 19 "C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\Pages\Product.cshtml"
                                      Write(p.Description);
@@ -165,7 +165,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.For = ModelExpressionProvi
                 WriteLiteral("\r\n            ");
                 EndContext();
                 BeginContext(489, 41, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "548c88927f2f4427941c9cf3f2b80758", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a1e0737b3ae948d2a788368bbf0a5cdb", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();

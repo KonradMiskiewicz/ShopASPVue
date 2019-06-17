@@ -84,3 +84,5 @@ C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp
 C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.1\Razor\Pages\Cart.g.cshtml.cs
 C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.1\Razor\Pages\Components\Cart\Default.g.cshtml.cs
 C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.1\Razor\Pages\Components\Cart\Small.g.cshtml.cs
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.1\Razor\Pages\Checkout\CustomerCheckInformation.g.cshtml.cs
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\obj\Debug\netcoreapp2.1\Razor\Pages\Checkout\Payment.g.cshtml.cs

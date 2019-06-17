@@ -105,7 +105,7 @@ using Shop;
             WriteLiteral("</div>\r\n\r\n");
             EndContext();
             BeginContext(232, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:cart", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ade3fa5e660d4b569b13c4976cb55922", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:cart", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d53bfb31e1a4e50a9f3d2bca7e074f3", async() => {
             }
             );
             __CartViewComponentTagHelper = CreateTagHelper<global::Shop.Pages.Pages_Cart.__Generated__CartViewComponentTagHelper>();

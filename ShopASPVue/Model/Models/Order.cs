@@ -9,6 +9,10 @@ namespace Shop.Domain.Models
     {
         public int OrderID { get; set; }
         public string OrderRed { get; set; }
+        public string First_Name { get; set; }
+        public string Last_Name { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
         public string Adress1 { get; set; }
         public string Adress2 { get; set; }
         public string City { get; set; }

@@ -1,6 +1,7 @@
 ##########
 #Foldes#
 .vs/
-#debug files#
-*.catche
-*.json
+
+#Files#
+Shop/appsettings.json
+

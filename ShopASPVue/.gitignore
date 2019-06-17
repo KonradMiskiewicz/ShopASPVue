@@ -1,5 +1,5 @@
 .vs/
-Shop/bin/
-Shop/obj/
-Shop.Application/bin/
-Shop.Application/obj/
+Shop/bin/*
+Shop/obj/*
+Shop.Application/bin/*
+Shop.Application/obj/*

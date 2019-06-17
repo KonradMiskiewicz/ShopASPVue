@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Shop</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bulma-0.7.5/css/bulma.css" />
+    </environment>
+    <environment exclude="Production">
+        <link rel="stylesheet" href="~/lib/bulma-0.7.5/css/bulma.min.css" />
+    </environment>
+</head>
+<body>
+    <h3 class="title has-text-centered">Admin Panel</h3>
+
+
+    <div class=" container">
+        <div class="columns">
+            <div class="column is-3">
+                <div class="menu">
+                    <div class="menu-label">Admin panel</div>
+                    <ul class="menu-list">
+                        <li><a asp-page="/Admin/Index">Products</a></li>
+                        <li><a asp-page="/Admin/Orders">Orders</a></li>
+                        <li><a asp-page="/Admin/Stock">Stock</a></li>
+                    </ul>
+                    <ul class="menu-list">
+                        <li><a asp-page="/Index">Back To Home</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; 2019 - Shop</p>
+        </footer>
+    </div>
+    <script src="~/js/Vue.js"></script>
+    <script src="~/js/Axios.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -26,3 +26,5 @@ C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Application\obj\Debu
 C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Application\obj\Debug\netcoreapp2.1\Shop.Application.csproj.CopyComplete
 C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Application\obj\Debug\netcoreapp2.1\Shop.Application.dll
 C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Application\obj\Debug\netcoreapp2.1\Shop.Application.pdb
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Application\bin\Debug\netcoreapp2.1\Newtonsoft.Json.dll
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop.Application\bin\Debug\netcoreapp2.1\Newtonsoft.Json.xml

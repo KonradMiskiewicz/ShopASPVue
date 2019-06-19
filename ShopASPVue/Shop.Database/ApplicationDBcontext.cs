@@ -11,16 +11,16 @@ namespace Shop.Database
         public DbSet<Product> Products { get; set; }
         public DbSet<Stock> Stock { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderProduct> OrderProduct { get; set; }
+        public DbSet<OrderStock> OrderStocks { get; set; }
 
 
         //method for generating PKS
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder); 
-            modelBuilder.Entity<OrderProduct>().HasKey(x => new
+            modelBuilder.Entity<OrderStock>().HasKey(x => new
             {
-                x.ProductId,
+                x.StockID,
                 x.OrderId
             });
         }

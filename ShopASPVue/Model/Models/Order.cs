@@ -9,6 +9,7 @@ namespace Shop.Domain.Models
     {
         public int OrderID { get; set; }
         public string OrderRed { get; set; }
+        public string StripeReference { get; set; }
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
         public string Email { get; set; }

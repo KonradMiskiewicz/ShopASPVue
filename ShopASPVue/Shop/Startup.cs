@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -37,14 +38,43 @@ namespace Shop
             //Migrations
             services.AddDbContext<ApplicationDBcontext>(options => options.UseSqlServer(Configuration["DefaultConnection"]));
 
+            services.AddIdentity<IdentityUser , IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+            })
+                .AddEntityFrameworkStores<ApplicationDBcontext>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Accounts/Login";
+
+            });
+
+            services.AddAuthorization(options => 
+            {
+                options.AddPolicy("Admin", policy => policy.RequireClaim("Role", "Admin"));
+                options.AddPolicy("Manager", policy => policy.RequireClaim("Role", "Manager"));
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddSession(options =>
             {
                 options.Cookie.Name = "Cart";
-                options.Cookie.MaxAge = TimeSpan.FromDays(365);
+                options.Cookie.MaxAge = TimeSpan.FromMinutes(20);
             });
+
+            //To authorize Admin folder
+            services
+                .AddMvc()
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions.AuthorizeFolder("/Admin");
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["SecretKey"]);
         }
@@ -66,7 +96,8 @@ namespace Shop
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
-            app.UseMvc();
+            app.UseAuthentication();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

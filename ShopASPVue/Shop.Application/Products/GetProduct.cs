@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Shop.Application.Products
 {
@@ -17,22 +18,40 @@ namespace Shop.Application.Products
             _ctx = context;
         }
 
-        public ProductViewModel Do(string name) =>
-            _ctx.Products.Include(x => x.Stock)
-            .Where(x => x.Name == name)
-            .Select(x => new ProductViewModel
+        public async Task<ProductViewModel> Do(string name)
+        {
+            var stocksOnHold =_ctx.StockOnHold.Where(x => x.ExpiryDate < DateTime.Now).ToList();
+
+            if(stocksOnHold.Count > 0)
             {
-                Id = x.Id,
-                Name = x.Name,
-                Description = x.Description,
-                Value = $"€ {x.Value.ToString("N2")}",
-                Stock = x.Stock.Select(y => new StockViewModel
+                var stockToReturn = _ctx.Stock.Where(x => stocksOnHold.Any(y => y.StockId == x.Id)).ToList();
+
+                foreach(var stock in stockToReturn)
                 {
-                    Id = y.Id,
-                    Description = y.Description,
-                    InStock = y.Quality > 0
-                })
-            }).FirstOrDefault();
+                    stock.Quality = stock.Quality + stocksOnHold.FirstOrDefault(x => x.StockId == stock.Id).Qty;
+                }
+
+                _ctx.StockOnHold.RemoveRange(stocksOnHold);
+
+                await _ctx.SaveChangesAsync();
+            }
+
+            return _ctx.Products.Include(x => x.Stock)
+                .Where(x => x.Name == name)
+                .Select(x => new ProductViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Value = $"€ {x.Value.ToString("N2")}",
+                    Stock = x.Stock.Select(y => new StockViewModel
+                    {
+                        Id = y.Id,
+                        Description = y.Description,
+                        InStock = y.Quality > 0
+                    })
+                }).FirstOrDefault();
+        }
         public class ProductViewModel
         {
             public int Id { get; set; }

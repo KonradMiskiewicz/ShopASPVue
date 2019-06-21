@@ -18,8 +18,13 @@ using Shop;
 
 #line default
 #line hidden
+#line 2 "C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Shop\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Authorization;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2d47ab5c93609c2e85a602b37aa9393d9e3d1829", @"/Pages/Admin/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bc731b762f80aec965b2cb36c6229f82c638ab7c", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c9f98cb844442790034df088dbf17b926bdc051b", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Admin__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

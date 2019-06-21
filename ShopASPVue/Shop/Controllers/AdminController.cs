@@ -5,6 +5,7 @@ using Shop.Database;
 using System.Threading.Tasks;
 using Shop.Application.StockAdmin;
 using Shop.Application.Products;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Shop.Controllers
 {

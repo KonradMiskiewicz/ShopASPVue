@@ -21,14 +21,13 @@
     <div class=" container">
         <div class="columns">
             <div class="column is-3">
-                <div class="menu">
-                    </ul>
+                <div class="menu">                 
                     @if ((await authService.AuthorizeAsync(User, "Manager")).Succeeded)
                     {
                     <p class="menu-label">Store menu</p>
                     <ul class="menu-list">
                         <li><a asp-page="/Admin/Index">Products</a></li>
-                        <li><a asp-page="/Admin/Orders">Orders</a></li>
+                        <li><a asp-page="/Admin/OrderMenagment">Orders Managment</a></li>
                         <li><a asp-page="/Admin/Stock">Stock</a></li>
                     </ul>
                     }
@@ -36,7 +35,7 @@
                     {
                         <p class="menu-label">Admin panel</p>
                         <ul class="menu-list">
-                            <li><a asp-page="/Admin/Index">Configure users</a></li>
+                            <li><a asp-page="/Admin/ConfigureUsers">Configure users</a></li>
                         </ul>
                     }
                     <p class="menu-label"></p>

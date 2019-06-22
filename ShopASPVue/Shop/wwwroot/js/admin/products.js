@@ -1,17 +1,17 @@
 ﻿var app = new Vue({
     el: '#app',
     data: {
-            menu: 0,
-            loading: false,
-            editing: false,
-            objectindex: 0,
-            productModel: {
-                id: 0,
-                name: "Product Name",
-                description: "Product Description",
-                value: 1.99
-            },
-            products: []
+        menu: 0,
+        loading: false,
+        editing: false,
+        objectindex: 0,
+        productModel: {
+            id: 0,
+            name: "Product Name",
+            description: "Product Description",
+            value: 1.99
+        },
+        products: []
     },
     mounted: function () {
         this.getProducts();
@@ -19,7 +19,7 @@
     methods: {
         getProducts: function () {
             this.loading = true;
-            axios.get("/Admin/products")
+            axios.get("/products")
                 .then(res => {
                     console.log(res);
                     this.products = res.data;
@@ -32,7 +32,7 @@
                 });
         },
         getProduct: function (id) {
-            axios.get("/Admin/products/" + id)
+            axios.get("/products/" + id)
                 .then(res => {
                     console.log(res);
                     var product = res.data;
@@ -53,7 +53,7 @@
         },
         createProduct: function () {
             this.loading = true;
-            axios.post("/Admin/products", this.productModel)
+            axios.post("/products", this.productModel)
                 .then(res => {
                     console.log(res.data);
                     this.products.push(res.data);
@@ -73,7 +73,7 @@
         },
         updateProduct: function () {
             this.loading = true;
-            axios.put("/Admin/products", this.productModel)
+            axios.put("/products", this.productModel)
                 .then(res => {
                     console.log(res.data);
                     this.products.splice(this.objectindex, 1, res.data);
@@ -89,7 +89,7 @@
         //removing random after refresh removing correct id
         deleteProduct: function (id, index) {
             this.loading = true;
-            axios.delete("/Admin/products/" + id)
+            axios.delete("/products/" + id)
                 .then(res => {
                     console.log(res.data);
                     this.products.splice(index, 1);

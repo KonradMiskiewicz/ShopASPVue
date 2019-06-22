@@ -1,4 +1,4 @@
-﻿var app = new Vue({
+﻿ var app = new Vue({
     el: '#app',
     data: {
         products: [],
@@ -15,7 +15,7 @@
     methods: {
         getStock: function () {
             this.loading = true;
-            axios.get("/Admin/stocks")
+            axios.get("/stocks")
                 .then(res => {
                     console.log(res);
                     this.products = res.data;
@@ -33,7 +33,7 @@
         },
         updateStock: function () {
             this.loading = true;
-            axios.put("/Admin/stocks", {
+            axios.put("/stocks", {
                 stock: this.selectedProduct.stock.map(x => {
                     return {
                         id: x.id,
@@ -56,7 +56,7 @@
         },
         addStock: function () {
             this.loading = true;
-            axios.post("/Admin/stocks", this.newStock)
+            axios.post("/stocks", this.newStock)
                 .then(res => {
                     console.log(res);
                     this.selectedProduct.stock.push(res.data);
@@ -71,7 +71,7 @@
         },
         deleteStock: function (id, index) {
             this.loading = true;
-            axios.delete("/Admin/stocks/" + id)
+            axios.delete("/stocks/" + id)
                 .then(res => {
                     console.log(res);
                     this.selectedProduct.stock.splice(index, 1);

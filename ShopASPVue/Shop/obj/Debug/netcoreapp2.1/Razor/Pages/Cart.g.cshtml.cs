@@ -110,7 +110,7 @@ using Microsoft.AspNetCore.Authorization;
             WriteLiteral("</div>\r\n\r\n");
             EndContext();
             BeginContext(232, 32, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:cart", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aa10ddf176e445229abb73a162e52506", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("vc:cart", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "953f30e52236405ca63bb8e0c744b973", async() => {
             }
             );
             __CartViewComponentTagHelper = CreateTagHelper<global::Shop.Pages.Pages_Cart.__Generated__CartViewComponentTagHelper>();

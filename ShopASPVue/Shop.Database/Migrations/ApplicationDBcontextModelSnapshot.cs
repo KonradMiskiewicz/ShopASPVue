@@ -192,31 +192,43 @@ namespace Shop.Database.Migrations
 
                     b.Property<string>("City");
 
+                    b.Property<string>("Email");
+
+                    b.Property<string>("First_Name");
+
+                    b.Property<string>("Last_Name");
+
                     b.Property<string>("OrderRed");
 
+                    b.Property<string>("PhoneNumber");
+
                     b.Property<string>("PostCode");
+
+                    b.Property<string>("StripeReference");
 
                     b.HasKey("OrderID");
 
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Shop.Domain.Models.OrderProduct", b =>
+            modelBuilder.Entity("Shop.Domain.Models.OrderStock", b =>
                 {
-                    b.Property<int>("ProductId");
+                    b.Property<int>("StockID");
 
                     b.Property<int>("OrderId");
 
-                    b.HasKey("ProductId", "OrderId");
+                    b.Property<int>("Quality");
+
+                    b.HasKey("StockID", "OrderId");
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderProduct");
+                    b.ToTable("OrderStocks");
                 });
 
             modelBuilder.Entity("Shop.Domain.Models.Product", b =>
                 {
-                    b.Property<int>("Id_Product")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -226,7 +238,7 @@ namespace Shop.Database.Migrations
 
                     b.Property<decimal>("Value");
 
-                    b.HasKey("Id_Product");
+                    b.HasKey("Id");
 
                     b.ToTable("Products");
                 });
@@ -295,16 +307,16 @@ namespace Shop.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Shop.Domain.Models.OrderProduct", b =>
+            modelBuilder.Entity("Shop.Domain.Models.OrderStock", b =>
                 {
                     b.HasOne("Shop.Domain.Models.Order", "Order")
                         .WithMany("orderProducts")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Shop.Domain.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
+                    b.HasOne("Shop.Domain.Models.Stock", "Stock")
+                        .WithMany("OrderStocks")
+                        .HasForeignKey("StockID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

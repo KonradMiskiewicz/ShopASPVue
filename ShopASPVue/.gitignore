@@ -1,5 +1,8 @@
+##########
+#Foldes#
 .vs/
-Shop/bin/
-Shop/obj/
-Shop.Application/bin/
-Shop.Application/obj/
+
+#Files#
+*.cache
+Shop/appsettings.json
+

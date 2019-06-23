@@ -2,16 +2,40 @@
 @model CartModel
 @{
 }
-<div>
-    @foreach (var product in Model.CartList)
-    {
-    <p>@product.Name</p>
-    <p>@product.Value</p>
-    <p>@product.Quality</p>
-    <p>@product.StockId</p>
-    <hr />
-    }
+<div class="container">
+    <div class="columns">
+        <div class="column is-8 is-offset-2">
+
+            @foreach (var product in Model.CartList)
+            {
+                <div class="level">
+                    <div class="level-item">
+                        <figure class="image is-128x128">
+                            <img src="~/images/bojowki-jack_jones-bezowy-meskie-1.png" />
+                        </figure>
+                    </div>
+                    <div class="level-item">
+                        <p class="title">
+                            @product.Name
+                        </p>
+                    </div>
+                    <div class="level-item">
+                        <p>@product.Value</p>
+                    </div>
+                    <div class="level-item is-hidden-mobile">
+                        <p>@product.Quality</p>
+                    </div>
+                    <div class="level-item is-hidden-mobile">
+                        <p>@product.StockId</p>
+                    </div>
+                </div>
+            }
+        <div class="has-text-right">
+            <a asp-page="/Index" class="button is-info">Let me buy something else</a>
+            <a asp-page="/Checkout/CustomerCheckInformation" class="button is-info">Payment</a>
+        </div>
+        </div>
+    </div>
 </div>
 
-<vc:cart view="Small"></vc:cart>
 

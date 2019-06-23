@@ -4,16 +4,54 @@
     ViewData["Title"] = "Home page";
 }
 
+<div class="section">
+    <div class="columns is-multiline">
+        @{
+            for (int i = 0; i < 3; i++)
+            {
+                foreach (var p in Model.Products)
+                {
+                <div class="column is-3-desktop is-4-tablet is-6-mobile">
+                <a class="card" asp-page="Product" asp-route-name="@p.Name.Replace(" ", "-")">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="~/images/bojowki-jack_jones-bezowy-meskie-1.png" />
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        @{
 
-<div>
-    @{
-        foreach (var p in Model.Products)
-        {
-            <a asp-page="Product" asp-route-name="@p.Name.Replace(" ", "-")">
-                @p.Name - @p.Description - @p.Value
-            </a>
-            <br />
-        }
-    }
+                            string cssClass = "";
+                            string message = "";
+                            if (p.StockCount == 0)
+                            {
+                                cssClass = "is-danger";
+                                message = "Out of Stock";
+                            }
+                            else if (p.StockCount <= 10)
+                            {
+                                cssClass = "is-warning";
+                                message = "Last products";
+                            }
+                        }
+                        @if (p.StockCount <= 10)
+                        {
+                            <div class="notification is-paddingless @cssClass">
+                                @message
+                            </div>
+                        }
+                        <p class="title is-size-4-desktop is-size-6-mobile">
+                            @p.Name -  @p.Value
+                        </p>
+                        <p class="subtitle">
+                            @p.Description
+                        </p>
+                    </div>
+                </a>
+                    </div>
+                    }
+                }
+            }
+    </div>
 </div>
-@await Component.InvokeAsync("Cart")
+

@@ -1,14 +1,5 @@
-﻿@model IEnumerable<Shop.Application.Cart.GetCart.Response>
+﻿@model string
 @{
 
 }
-<h2>Small Cart Component</h2>
-<div>
-    @foreach (var product in Model)
-    {<div>
-        <span>@product.Name</span>
-        <span>@product.Value</span>
-        <span>@product.Quality</span>
-     </div>
-    }
-</div>
+<a class="navbar-item" asp-page="Admin/Cart">Cart @Model</a>

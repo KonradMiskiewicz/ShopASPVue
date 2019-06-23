@@ -7,3 +7,12 @@ C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.AssemblyInfo.cs
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.dll
 C:\Users\n4dre\Desktop\ShopASP\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.pdb
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\bin\Debug\netcoreapp2.1\Shop.Domain.deps.json
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\bin\Debug\netcoreapp2.1\Shop.Domain.dll
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\bin\Debug\netcoreapp2.1\Shop.Domain.pdb
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.csprojAssemblyReference.cache
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.csproj.CoreCompileInputs.cache
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.AssemblyInfoInputs.cache
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.AssemblyInfo.cs
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.dll
+C:\Users\n4dre\Desktop\SHOASPVUE\ShopASPVue\ShopASPVue\Model\obj\Debug\netcoreapp2.1\Shop.Domain.pdb

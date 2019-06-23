@@ -3,30 +3,28 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <div id="app">
-
-        <button v-on:click="getProducts">Get all products</button>
-        <div>
-            <p v-for="product in products">
-                {{product.name}} - {{product.description}} - {{product.value}}
-                <a @@click="">Edit Product</a>
-                <a @@click="">Delete Product</a>
-            </p>
-        </div>
-        <div>
-            <input v-model="productModel.name" />
-            <input v-model="productModel.description" />
-            <input v-model="productModel.value" />
-            <button @@click="createProduct" v-if ="productModel.id">Create Product</button>
-            <button @@click="updateProduct">Update</button>
-            <button @@click="createProduct">Delete</button>
-        </div>
-    </div>
+    <div id="app" class="container">
+        <div class="columns">
+            <div class="column is-3">
+                <div class="menu">
+                    <div class="menu-label">Admin panel</div>
+                    <ul class="menu-list">
+                        <li><a>Products</a></li>
+                        <li><a>Orders</a></li>
+                        <li><a>Stock</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-9">
+                <product-manager></product-manager>
+            </div>
+        </div>    
+</div>
 
 @section scripts{
     <script src="~/js/Vue.js"></script>
     <script src="~/js/Axios.js"></script>
+    <script src="~/js/admin/product-component.js"></script>
     <script src="~/js/admin/main.js"></script>
-
 }
 

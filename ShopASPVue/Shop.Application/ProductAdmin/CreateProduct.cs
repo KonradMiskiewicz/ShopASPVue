@@ -26,9 +26,10 @@ namespace Shop.Application.ProductAdmin
             };
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
+
             return new Response
             {
-                Id = product.Id_Product,
+                Id = product.Id,
                 Name = product.Name,
                 Description = product.Description,
                 Value = product.Value

@@ -18,12 +18,14 @@ namespace Shop.Application.Products
         public IEnumerable<ProductViewModel> Listing() =>
             _ctx.Products.ToList().Select(x => new ProductViewModel
             {
+                Id = x.Id,
                 Name = x.Name,
                 Description = x.Description,
                 Value = $"€ {x.Value.ToString("N2")}"
             });
         public class ProductViewModel
         {
+            public int Id { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
             public string Value { get; set; }

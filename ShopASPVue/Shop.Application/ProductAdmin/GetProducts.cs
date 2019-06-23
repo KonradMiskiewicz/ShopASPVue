@@ -18,7 +18,7 @@ namespace Shop.Application.ProductAdmin.GetProducts
         public IEnumerable<ProductViewModel> Listing() =>
             _ctx.Products.ToList().Select(x => new ProductViewModel
             {
-                Id = x.Id_Product,
+                Id = x.Id,
                 Name = x.Name,
                 Description = x.Description,
                 Value = x.Value

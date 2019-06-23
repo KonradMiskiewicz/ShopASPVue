@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Model\\Shop.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Model\\Shop.Domain.csproj",
       "projectName": "Shop.Domain",
-      "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Model\\Shop.Domain.csproj",
+      "projectPath": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Model\\Shop.Domain.csproj",
       "packagesPath": "C:\\Users\\n4dre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Model\\obj\\",
+      "outputPath": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

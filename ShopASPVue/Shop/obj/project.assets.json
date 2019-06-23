@@ -12596,11 +12596,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop\\Shop.csproj",
+      "projectUniqueName": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Shop\\Shop.csproj",
       "projectName": "Shop",
-      "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop\\Shop.csproj",
+      "projectPath": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Shop\\Shop.csproj",
       "packagesPath": "C:\\Users\\n4dre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop\\obj\\",
+      "outputPath": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Shop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12619,11 +12619,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj": {
-              "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj"
+            "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj": {
+              "projectPath": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Shop.Application\\Shop.Application.csproj"
             },
-            "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
-              "projectPath": "C:\\Users\\n4dre\\Desktop\\ShopASP\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj"
+            "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj": {
+              "projectPath": "C:\\Users\\n4dre\\Desktop\\SHOASPVUE\\ShopASPVue\\ShopASPVue\\Shop.Database\\Shop.Database.csproj"
             }
           }
         }

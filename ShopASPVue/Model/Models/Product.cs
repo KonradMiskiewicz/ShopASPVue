@@ -9,7 +9,7 @@ namespace Shop.Domain.Models
     {
         //addnotation for Primary key 
         [Key]
-        public int Id_Product { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Value { get; set; }

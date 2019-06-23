@@ -10,8 +10,8 @@ using Shop.Database;
 namespace Shop.Database.Migrations
 {
     [DbContext(typeof(ApplicationDBcontext))]
-    [Migration("20190510202745_init")]
-    partial class init
+    [Migration("20190516174905_Shop Model")]
+    partial class ShopModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -182,6 +182,40 @@ namespace Shop.Database.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Shop.Domain.Models.Order", b =>
+                {
+                    b.Property<int>("OrderID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Adress1");
+
+                    b.Property<string>("Adress2");
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("OrderRed");
+
+                    b.Property<string>("PostCode");
+
+                    b.HasKey("OrderID");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Models.OrderProduct", b =>
+                {
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("OrderId");
+
+                    b.HasKey("ProductId", "OrderId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("OrderProduct");
+                });
+
             modelBuilder.Entity("Shop.Domain.Models.Product", b =>
                 {
                     b.Property<int>("Id_Product")
@@ -197,6 +231,25 @@ namespace Shop.Database.Migrations
                     b.HasKey("Id_Product");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("Shop.Domain.Models.Stock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("Quality");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Stock");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -241,6 +294,27 @@ namespace Shop.Database.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser")
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Models.OrderProduct", b =>
+                {
+                    b.HasOne("Shop.Domain.Models.Order", "Order")
+                        .WithMany("orderProducts")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Shop.Domain.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Models.Stock", b =>
+                {
+                    b.HasOne("Shop.Domain.Models.Product", "Product")
+                        .WithMany("Stock")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

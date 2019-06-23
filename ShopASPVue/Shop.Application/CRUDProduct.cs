@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Shop.Database;
 using Shop.Domain.Models;
 
-namespace Shop.Application
+namespace Shop.Application.CreateProduct
 {
     public class CRUDProduct
     {
@@ -12,9 +13,21 @@ namespace Shop.Application
             _context = context;
         }
 
-        public void Do(int id, string Name, string Description)
+        public async Task Do(ProductViewModel mvn)
         {
-            _context.Products.Add(new Product { Id_Product = id, Name = Name, Description = Description });
+            _context.Products.Add(new Product {
+                Name = mvn.Name,
+                Description = mvn.Description,
+                Value = mvn.Value
+               
+            });
+            await _context.SaveChangesAsync();
         }
+    }
+    public class ProductViewModel
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Value { get; set; }
     }
 }

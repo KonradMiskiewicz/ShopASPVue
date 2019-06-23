@@ -2,9 +2,26 @@
 @model Shop.Pages.Accounts.LoginModel
 @{
 }
+    <div class="columns">
+        <div class="column is-6">
+            <div class="field">
+                <form method="post">
+                    <div class="level-left">
 
-<form method="post">
-    <input asp-for="Input.UserName" />
-    <input asp-for="Input.Password" />
-    <input type="submit" name="name" value="Sign In" />
-</form>
+                        <div class="level-item">
+                            <label class="label">Login: </label>
+                            <input class="input" asp-for="Input.UserName" />
+                        </div>
+                        <div class="level-item">
+                            <label class="label">Password: </label>
+                            <input class="input" type="password" asp-for="Input.Password" />
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <input class="button is-success" type="submit" value="Sign In" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>

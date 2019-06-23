@@ -25,6 +25,12 @@ namespace Shop.Pages.Accounts
         }
         [BindProperty]
         public LoginViewModel Input { get; set; }
+        /// <summary>
+        /// Method for getting UserName and Password from View and checking in startup configuration
+        /// </summary>
+        /// <returns>
+        /// Page
+        /// </returns>
         public async Task <IActionResult> OnPost()
         {
             var result = await _signManager.PasswordSignInAsync(Input.UserName, Input.Password, false, true);

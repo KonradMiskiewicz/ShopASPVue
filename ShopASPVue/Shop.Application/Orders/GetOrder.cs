@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// Class for taking many params from many models 
+/// </summary>
 namespace Shop.Application.Orders
 {
     public class GetOrder
@@ -37,7 +39,13 @@ namespace Shop.Application.Orders
             public string Value { get; set; }
             public int Quality { get; set; }
             public string StockDescription { get; set; }
-        }
+        }/// <summary>
+        /// Method for creating wires from differend models
+        /// </summary>
+        /// <param name="reference"></param>
+        /// <returns>
+        /// DBcontext
+        /// </returns>
         public Response Do(string reference)
         {
            return _ctx.Orders

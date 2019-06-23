@@ -2,14 +2,27 @@
 @{ 
 
 }
-<h2>Big Cart Component</h2>
-    <div>
-        @foreach (var product in Model)
-        {
-            <p>@product.Name</p>
-            <p>@product.Value</p>
-            <p>@product.Quality</p>
-            <p>@product.StockId</p>
-            <hr/>
-        }
-    </div>
+<p class="title">Cart</p>
+<div>
+    @foreach (var product in Model)
+    {
+        <article class="media">
+            <figure class="media-left">
+                <p class="image is-64x64">
+                   <img src="~/images/bojowki-jack_jones-bezowy-meskie-1.png" />
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p class="title">@product.Name</p>
+                    <div class="level">
+                        <div class="level-item">Qty: @product.Quality</div>
+                        <div class="level-item">Size: @product.StockId</div>
+                        <div class="level-item">Value: @product.Value</div>
+                    </div>
+                </div>               
+            </div>
+        </article>
+        <hr />
+    }
+</div>

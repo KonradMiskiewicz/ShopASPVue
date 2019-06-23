@@ -14,6 +14,13 @@ namespace Shop.Application.ProductAdmin
         {
             _context = context;
         }
+        /// <summary>
+        /// Method update specific product
+        /// </summary>
+        /// <param name="mvn"></param>
+        /// <returns>
+        /// response
+        /// </returns>
         public async Task<Response> Update(Request mvn)
         {
             var product = _context.Products.FirstOrDefault(x => x.Id == mvn.Id);

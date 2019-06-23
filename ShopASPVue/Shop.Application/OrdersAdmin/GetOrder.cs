@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// Class for including many models
+/// </summary>
 namespace Shop.Application.OrdersAdmin
 {
     public class GetOrder
@@ -36,7 +38,13 @@ namespace Shop.Application.OrdersAdmin
             public string Descritpion { get; set; }
             public int Qty { get; set; }
             public string StockDescription { get; set; }
-        }
+        }/// <summary>
+        /// Method for including methods and returning response from server
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>
+        /// DBcontext
+        /// </returns>
         public Response Do(int id) =>
             _ctx.Orders
             .Where(x => x.OrderID == id)

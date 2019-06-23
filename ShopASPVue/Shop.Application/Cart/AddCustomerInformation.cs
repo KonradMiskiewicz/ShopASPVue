@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-
+/// <summary>
+/// Class for creating Customer information and serialize to json object
+/// </summary>
 namespace Shop.Application.Cart
 {
     public class AddCustomerInformation

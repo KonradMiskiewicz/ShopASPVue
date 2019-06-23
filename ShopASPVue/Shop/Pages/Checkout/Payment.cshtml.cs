@@ -9,7 +9,9 @@ using Shop.Application.Cart;
 using Shop.Application.Orders;
 using Shop.Database;
 using Stripe;
-
+/// <summary>
+/// Payment class from behind code
+/// </summary>
 namespace Shop.Pages.Checkout
 {
     public class PaymentModel : PageModel
@@ -22,7 +24,12 @@ namespace Shop.Pages.Checkout
             PublicKey = configuration["Stripe:PublicKey"].ToString();
             _ctx = ctx;
         }
-        
+        /// <summary>
+        /// Getting CustomerInformation and freezing session  
+        /// </summary>
+        /// <returns>
+        /// Page
+        /// </returns>
         public IActionResult OnGet()
         {
             var information = new GetCustomerInformation(HttpContext.Session);
@@ -32,6 +39,14 @@ namespace Shop.Pages.Checkout
             }
             return Page();
         }
+        /// <summary>
+        /// Posting and checking card number for Stripe API
+        /// </summary>
+        /// <param name="stripeEmail"></param>
+        /// <param name="stripeToken"></param>
+        /// <returns>
+        /// Page
+        /// </returns>
         public async Task<IActionResult> OnPost(string stripeEmail, string stripeToken)
         {
             var customers = new CustomerService();

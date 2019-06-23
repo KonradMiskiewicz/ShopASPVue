@@ -15,6 +15,12 @@ namespace Shop.Application.StockAdmin
         {
             _ctx = ctx;
         }
+        /// <summary>
+        /// Method taking specific stock and product 
+        /// </summary>
+        /// <returns>
+        /// stock object
+        /// </returns>
         public IEnumerable<ProductViewModel> ListingStock()
         {
             var stock = _ctx.Products.Include(x => x.Stock)

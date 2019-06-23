@@ -14,6 +14,13 @@ namespace Shop.Application.StockAdmin
         {
             _context = context;
         }
+        /// <summary>
+        /// Task is responsible for deleting specific Stock object 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>
+        /// true
+        /// </returns>
         public async Task<bool> Delete(int id)
         {
             var Stock = _context.Stock.FirstOrDefault(x => x.Id == id);

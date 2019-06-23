@@ -7,7 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// Class for getting specific order
+/// </summary>
 namespace Shop.Application.Cart
 {
     public class GetOrder
@@ -43,10 +45,14 @@ namespace Shop.Application.Cart
             public string Adress2 { get; set; }
             public string City { get; set; }
             public string PostCode { get; set; }
-        }
+        }/// <summary>
+        /// Method for generating response from server to client
+        /// </summary>
+        /// <returns>
+        /// response
+        /// </returns>
         public Response Do()
-        {
-            //TODO: account for multiple items in the cart    
+        { 
             var cart = _session.GetString("cart");
 
             var cartList = JsonConvert.DeserializeObject<List<CartProduct>>(cart);
@@ -80,7 +86,6 @@ namespace Shop.Application.Cart
                 }
 
             };
-
         }
     }
 }

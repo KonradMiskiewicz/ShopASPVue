@@ -15,6 +15,13 @@ namespace Shop.Application.ProductAdmin
             _context = context;
 
         }
+        /// <summary>
+        /// Task taking a request from client, adding to db, saving and returning response 
+        /// </summary>
+        /// <param name="vn"></param>
+        /// <returns>
+        /// response
+        /// </returns>
         public async Task<Response> Add(Request vn)
         {
             var product = new Product

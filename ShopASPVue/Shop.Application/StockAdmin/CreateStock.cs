@@ -14,6 +14,13 @@ namespace Shop.Application.StockAdmin
         {
             _ctx = ctx;
         }
+        /// <summary>
+        /// Method adding stock object to db context
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>
+        /// response
+        /// </returns>
         public async Task<Response> Add(Request request)
         {
             var stock = new Stock

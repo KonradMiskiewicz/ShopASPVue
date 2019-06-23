@@ -14,7 +14,12 @@ namespace Shop.Application.ProductAdmin.GetProducts
         {
             _ctx = context;
         }
-
+        /// <summary>
+        /// Method taking all the products by select clauzule from sql
+        /// </summary>
+        /// <returns>
+        /// List
+        /// </returns>
         public IEnumerable<ProductViewModel> Listing() =>
             _ctx.Products.ToList()
             .Select(x => new ProductViewModel

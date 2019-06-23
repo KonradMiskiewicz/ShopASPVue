@@ -19,6 +19,13 @@ namespace Shop.Application.UserAdmin
         {
             public string UserName { get; set; }
         }
+        /// <summary>
+        /// Task adding user and adding him role and claim
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>
+        /// true
+        /// </returns>
         public async Task<bool> Do(Request request)
         {
             var managerUser = new IdentityUser

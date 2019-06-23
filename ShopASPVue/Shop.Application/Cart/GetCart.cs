@@ -7,7 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+/// <summary>
+/// Class for geting cart
+/// </summary>
 namespace Shop.Application.Cart
 {
     public class GetCart
@@ -24,12 +26,18 @@ namespace Shop.Application.Cart
         {
             public string Name { get; set; }
             public string Value { get; set; }
+            public decimal RealValue { get; set; }
             public int StockId { get; set; }
             public int Quality { get; set; }
         }
+        /// <summary>
+        /// Method for return List of orders created by client 
+        /// </summary>
+        /// <returns>
+        /// List of products and stock id taken by client
+        /// </returns>
         public IEnumerable<Response> Do()
-        {
-            //TODO: account for multiple items in the cart    
+        {  
             var stringObject =_session.GetString("cart");
             if (string.IsNullOrEmpty(stringObject))
             {
@@ -44,6 +52,7 @@ namespace Shop.Application.Cart
                 {
                     Name = x.Product.Name,
                     Value = $"€ {x.Product.Value.ToString("N2")}",
+                    RealValue = x.Product.Value,
                     StockId = x.Id,
                     Quality = cartList.FirstOrDefault(y => y.StockId == x.Id).Qty
                 }).ToList();

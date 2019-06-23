@@ -14,14 +14,21 @@ namespace Shop.Application.ProductAdmin
         {
             _ctx = context;
         }
-
+        /// <summary>
+        /// Method is for taking spedific product provided by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>
+        /// ViewModel
+        /// </returns>
         public ProductViewModel Do(int id) =>
           _ctx.Products.Where(x => x.Id == id).Select(x => new ProductViewModel
           {
               Id = x.Id,
               Name = x.Name,
               Description = x.Description,
-              Value = x.Value}).FirstOrDefault();
+              Value = x.Value
+          }).FirstOrDefault();
 
         public class ProductViewModel
         {

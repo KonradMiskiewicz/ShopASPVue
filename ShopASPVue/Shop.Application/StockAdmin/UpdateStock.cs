@@ -14,6 +14,13 @@ namespace Shop.Application.StockAdmin
         {
             _ctx = ctx;
         }
+        /// <summary>
+        /// Task updating specific stock
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>
+        /// Response
+        /// </returns>
         public async Task<Response> Update(Request request)
         {
             var stack = new List<Stock>();

@@ -14,6 +14,13 @@ namespace Shop.Application.ProductAdmin
         {
             _context = context;
         }
+        /// <summary>
+        /// Task is bool type but it has a responsibility for removing specific product from context 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>
+        /// true
+        /// </returns>
         public async Task<bool> Delete(int id)
         {
             var Product = _context.Products.FirstOrDefault(x => x.Id == id);

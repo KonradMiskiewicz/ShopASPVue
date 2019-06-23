@@ -5,7 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-
+/// <summary>
+/// Class for getting customer information 
+/// </summary>
 namespace Shop.Application.Cart
 {
     public class GetCustomerInformation
@@ -27,6 +29,12 @@ namespace Shop.Application.Cart
             public string City { get; set; }
             public string PostCode { get; set; }
         }
+        /// <summary>
+        /// Method generating request to server side from user
+        /// </summary>
+        /// <returns>
+        /// request
+        /// </returns>
         public Request Do()
         {
             var stringObject =_session.GetString("customer-onfo");

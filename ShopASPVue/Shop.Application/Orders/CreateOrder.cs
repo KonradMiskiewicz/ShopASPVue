@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/// <summary>
+/// Class for creating orders
+/// </summary>
 namespace Shop.Application.Orders
 {
     public class CreateOrder
@@ -36,6 +38,13 @@ namespace Shop.Application.Orders
             public int StockId { get; set; }
             public int Quality { get; set; }
         }
+        /// <summary>
+        /// Function for adding order to db 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>
+        /// awaited task 
+        /// </returns>
         public async Task<bool> Do(Request request)
         {
             var stocksOnHold = _ctx.StockOnHold.Where(x => x.SessionID == request.SessionID).ToList();
@@ -65,6 +74,12 @@ namespace Shop.Application.Orders
             _ctx.Orders.Add(order);
             return await _ctx.SaveChangesAsync() > 0;
         }
+        /// <summary>
+        /// Method for generating random string from chars
+        /// </summary>
+        /// <returns>
+        /// string
+        /// </returns>
         public string CreateOrderReference()
         {
             var chars = "HSDHAHJDKJSANKJSANlkanlkafsnlka99898";

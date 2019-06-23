@@ -28,7 +28,6 @@ namespace Shop.Application.Cart
         public async Task<bool> Do(Request request)
         {
 
-
             var stockOnHold = _ctx.StockOnHold.Where(x => x.SessionID == _session.Id).ToList();
 
             var stockToHold = _ctx.Stock.Where(x => x.Id == request.StockId).FirstOrDefault();

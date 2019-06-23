@@ -15,7 +15,12 @@ namespace Shop.Application.Products
         {
             _ctx = context;
         }
-
+        /// <summary>
+        /// Method including Stick model in product
+        /// </summary>
+        /// <returns>
+        /// List
+        /// </returns>
         public IEnumerable<ProductViewModel> Listing() =>
             _ctx.Products
             .Include(x => x.Stock)

@@ -136,9 +136,11 @@ namespace Shop.Database.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("ProviderKey");
+                    b.Property<string>("ProviderKey")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -169,9 +171,11 @@ namespace Shop.Database.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider");
+                    b.Property<string>("LoginProvider")
+                        .HasMaxLength(128);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Value");
 
@@ -198,7 +202,7 @@ namespace Shop.Database.Migrations
 
                     b.Property<string>("Last_Name");
 
-                    b.Property<string>("OrderRed");
+                    b.Property<string>("OrderRef");
 
                     b.Property<string>("PhoneNumber");
 
@@ -262,6 +266,27 @@ namespace Shop.Database.Migrations
                     b.ToTable("Stock");
                 });
 
+            modelBuilder.Entity("Shop.Domain.Models.StockOnHold", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("ExpiryDate");
+
+                    b.Property<int>("Qty");
+
+                    b.Property<string>("SessionID");
+
+                    b.Property<int>("StockId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StockId");
+
+                    b.ToTable("StockOnHold");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
@@ -310,7 +335,7 @@ namespace Shop.Database.Migrations
             modelBuilder.Entity("Shop.Domain.Models.OrderStock", b =>
                 {
                     b.HasOne("Shop.Domain.Models.Order", "Order")
-                        .WithMany("orderProducts")
+                        .WithMany("orderStocks")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -325,6 +350,14 @@ namespace Shop.Database.Migrations
                     b.HasOne("Shop.Domain.Models.Product", "Product")
                         .WithMany("Stock")
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Shop.Domain.Models.StockOnHold", b =>
+                {
+                    b.HasOne("Shop.Domain.Models.Stock", "Stock")
+                        .WithMany()
+                        .HasForeignKey("StockId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

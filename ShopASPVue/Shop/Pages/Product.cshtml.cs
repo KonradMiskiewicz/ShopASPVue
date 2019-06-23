@@ -26,9 +26,9 @@ namespace Shop.Pages
             public string Id { get; set; }
         }
         public GetProduct.ProductViewModel Product { get; set; }
-        public IActionResult OnGet(string name)
+        public async Task<IActionResult> OnGet(string name)
         {
-            Product = new GetProduct(_ctx).Do(name.Replace("-"," "));
+            Product = await new GetProduct(_ctx).Do(name.Replace("-"," "));
             if(Product == null)
             {
                 return Redirect("Index");
@@ -38,10 +38,18 @@ namespace Shop.Pages
                 return Page();
             }
         }
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost()
         {
-            new AddToCart(HttpContext.Session).Do(CartViewModel);
-            return RedirectToPage("Cart");
+            var stockAdded = await new AddToCart(HttpContext.Session, _ctx).Do(CartViewModel);
+            if (stockAdded)
+            {
+                return RedirectToPage("Cart");
+            }
+            else
+            {
+                //TODO : add a warning
+                return Page();
+            }
         }
     }
 }

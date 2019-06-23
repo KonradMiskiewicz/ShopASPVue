@@ -4,18 +4,28 @@
     ViewData["Title"] = "Index";
 }
     <div id="app">
-        <button v-on:click="tooglePrice">Toogle</button>
-        <input type="number" @@change="alert('ALERT!!!')" v-model="price" />
-        <p v-show="showPrice">
-            {{price}}
-        </p>
-        <p v-if="showPrice">
-            {{formatPrice}}
-        </p>
+
+        <button v-on:click="getProducts">Get all products</button>
+        <div>
+            <p v-for="product in products">
+                {{product.name}} - {{product.description}} - {{product.value}}
+                <a @@click="">Edit Product</a>
+                <a @@click="">Delete Product</a>
+            </p>
+        </div>
+        <div>
+            <input v-model="productModel.name" />
+            <input v-model="productModel.description" />
+            <input v-model="productModel.value" />
+            <button @@click="createProduct" v-if ="productModel.id">Create Product</button>
+            <button @@click="updateProduct">Update</button>
+            <button @@click="createProduct">Delete</button>
+        </div>
     </div>
 
 @section scripts{
     <script src="~/js/Vue.js"></script>
+    <script src="~/js/Axios.js"></script>
     <script src="~/js/admin/main.js"></script>
 
 }
